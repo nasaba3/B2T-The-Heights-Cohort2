@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+
+	<style type="text/css">
+		p{
+			display: inline-block;
+			width: 30%;
+		}
+		section{
+			display: inline-block;
+			width: 30%;
+			height: 200px;
+			border: Solid 5px #FF0000;
+			padding-left: 10px;
+			padding-right: 10px;
+
+		}
+
+		section h1{
+			text-align: center;
+		}
+		section:hover{
+				background-color: yellow;
+				padding: 50px;
+		}
+		.UandG{
+			text-decoration: underline;
+			color: rgb(0, 155, 0);
+		}
+		.BandI{
+			font-weight: 900;
+			font-style: italic;
+		}
+		h2.makeBig{
+			font-size: 100px;
+		}
+		h3.makeBig{
+			font-style: 80px;
+		}
+		#feet{
+			color: rgb(150,100, 0);
+		}
+		a:visited{
+			color: rgb(255, 192, 203);
+		}
+		@media screen and (max-width: 480px){
+			body{
+				background-color: red;
+			}
+			section{
+				display: block;
+				width: 100%;
+			}
+		}
+
+	</style>
+</head>
+<body>
+
+	<h1><a href="#feet">STATIC</a></h1>
+	<h1 style="position: absolute; top: 200%; left: 500% ">ABSOLUTE</h1>
+	<h1 class="UandG" style="position: fixed; top: 0px; right: 50%">FIXED</h1>
+	<h1 style="position: relative; top: -50px; left: 100px;">RELATIVE</h1>
+
+
+	<section>
+		<h1>About Me</h1>
+		<h4 class="UandG BandI">I am really cool. I'm alive and well.  Buuy me Cherry Pie</h4>
+	</section>
+
+	<section>
+		<h1 class="UandG">Wednesday's class</h1>
+		<h4>We went over CSS properties.  Like: Position Properties and DisplayProperties</h4>
+	</section>
+
+	<section>
+		<h1>Cherry Pie</h1>
+		<h4>As American</h4>
+	</section>
+
+<p class="UandG">aaaaaaaaaaaaaaaaaaaaaaaaaaaa bbbbbbbbbbbbbbbbb cccccccccccccccccccccccccccccccc</p>
+<p>aaaaaaaaaaaaaaaaaaaaaaaaaaaa bbbbbbbbbbbbbbbbb cccccccccccccccccccccccccccccccc</p>
+<p>aaaaaaaaaaaaaaaaaaaaaaaaaaaa bbbbbbbbbbbbbbbbb cccccccccccccccccccccccccccccccc</p>
+
+<footer>
+	<h2 class="makeBig">This is my footer</h2>
+	<h3 class="makeBig">and here is my toes</h3>
+	<h3 id="feet">Your feet stinks</h3>
+</footer>
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+</body>
+</html>
