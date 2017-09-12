@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<h1 id="Latin"></h1>
+	<script type="text/javascript">
+
+		//using a variable prompt to have a word entered to be transformed into Pig Latin
+		var str = prompt("Enter a word")
+
+		//Accessing the DOM to use the Id "latin" to have the words shown on the webpage.  Then using the slice method to remove the first character and concatinate it to end then add "ay"
+		
+		document.getElementById("Latin").innerHTML = "This is your word in pig latin:  " + str.slice(1, str.length)+(str.charAt(0)+ "ay")
+
+</script>
+</body>
+</html>
