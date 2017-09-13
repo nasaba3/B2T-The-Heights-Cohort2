@@ -8,20 +8,22 @@
 		<h1 id="Fruit"></h1>
 
 		<script type="text/javascript">
-			//first you want to create an empty HTML element by using a tag
-			//then you
+		
+		//The given array 	
 		var fruit = ["apples", "orange", "kiwi"];
-
+		
+		//Use a variable and create a prompt that tells the user to add more fruit
 	 	var more = prompt ("Add more fruit");
-
+	 	
+	 	//Add the prompted fruit to the end of the array of fruit
 	 	fruit.push(more);
 	 	console.log(fruit);
-
+	 	
+	 	//This method sorts the new combined fruit alphabetically
 	 	fruit.sort();
 	 	console.log(fruit);
 
-
-
+	 	//This displays the element separated by "with" in HTML text element
 	 	document.getElementById("Fruit").innerHTML = fruit.join(" with ");
 		
 		
