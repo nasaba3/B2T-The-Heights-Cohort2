@@ -8,11 +8,14 @@
 	<script type="text/javascript">
 
 		//using a variable prompt to have a word entered to be transformed into Pig Latin
-		var str = prompt("Enter a word")
-
-		//Accessing the DOM to use the Id "latin" to have the words shown on the webpage.  Then using the slice method to remove the first character and concatinate it to end then add "ay"
-		
-		document.getElementById("Latin").innerHTML = "This is your word in pig latin:  " + str.slice(1, str.length)+(str.charAt(0)+ "ay");
+		var str = prompt("Enter a word");
+		//variable first is starting at the first character, index zero
+		var first = str.charAt(0);
+		// variable second is the position of the first charcacter
+		var second = str.substr(1);
+		// variable third is concatinating the string without the first character and adding back that letter to the end and concatinates that with the string "ay"
+		var third = second + first + "ay"
+		document.getElementById("Latin").innerHTML = third;
 
 </script>
 </body>
