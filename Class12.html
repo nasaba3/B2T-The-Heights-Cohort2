@@ -9,6 +9,7 @@
 
 
 <script type="text/javascript">
+	
 	var name = 'Bobby';
 	var footballTeams = ['Giants', 'RoughRiders', 'Jets', name];
 	console.log(footballTeams);
@@ -17,11 +18,31 @@
 
 	//Changing the first element in array to 'Redskins'
 	footballTeams[0] = 'Redskins'; 
-	console.log('The 1st element us the array is now ' + footballTeams [0])
+	console.log('The amount of elements in the array is ' + footballTeams.length);
 
-	var iphones = ['6', '6 Plus', '6s', '7', '7 Plus', '7s', 'X'];
-	var samsung = [ 'S6', 'S6 Edge', 'S7', 'S7 Edge', 'S8'];
-	consile.log('iphone' + iphones[6] + "is better than Samsung" + samsung[1]);
+	console.log(footballTeams.toString());
+
+	//pushing 'Cardinals'
+	footballTeams.push('Cardinals');
+	console.log(footballTeams)
+	//Popping
+	var removedElement = footballTeams.pop();
+	console.log (removedElement + ' was removed from the array');
+
+	//push element using prompt
+	var input = prompt();
+	footballTeams.push(input);
+	console.log (footballTeams)
+
+	//add two new elements after the first element of the array, and remove 2nd element of the array
+	footballTeams.splice(1, 1, "Falcons", "Cowboys")
+	console.log(F=footballTeams)
+
+
+	//  var iphones = ['6', '6 Plus', '6s', '7', '7 Plus', '7s', 'X'];
+	// var samsung = [ 'S6', 'S6 Edge', 'S7', 'S7 Edge', 'S8'];
+	// console.log('iphone' + iphones[6] + "is better than Samsung" + samsung[1]);
+
 </script>
 </body>
 </html>
