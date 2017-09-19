@@ -6,17 +6,21 @@
 	<body>
 		<script type="text/javascript">
 		
-		if(x < y && x < z)
+			var x = prompt("What is your number for x?")
+			var y = prompt("What is your number for y?")
+			var z = prompt("What is your number for z?")
+
+			if(x > y && x > z)
 			{
-				console.log(x + ' is the smallest');	
+				console.log(x + ' is the largest');	
 			}
-			else if(y < z )
+			else if(y > z )
 			{
-				console.log(y + ' is the smallest');
+				console.log(y + ' is the largest');
 			}
 			else
 			{
-				console.log(z + ' is the smallest');
+				console.log(z + ' is the largest');
 			}	
 
 		</script>
