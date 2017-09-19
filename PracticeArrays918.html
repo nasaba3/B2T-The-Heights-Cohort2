@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+	</head>
+	<body>
+		<h1 id="display"></h1>
+		<img id="photo" src="">
+
+		<script type="text/javascript">
+			var colors = ['red', 'black', 'green'];
+			colors[1]
+			//returns black
+
+			console.log(colors.length);
+			//adds to end of array
+			colors.push('purple');
+			//adds to the end of the array
+			colors.unshift('gold')
+			//remove from the end of the array
+			colors.pop
+			//remove from beginning of array
+			colors.shift();
+
+			var nums = [100, 200, 300, 400, 500, 600];
+			nums.slice(2,5); //returns [300, 400, 500]
+
+			nums.slice(nums.length/2, nums.length);//returns second half of array without using hard numbers
+
+			nums.splice(2, 1, 1500);
+			//result [100, 200, 1500, 400, 500, 600]
+
+					//this turns the number into a string
+			/*
+			var age = parseInt(prompt());
+
+			if(age >= 18)
+			{
+				console.log('You are an adult');
+				//setting src of img
+				document.getElementById('photo').src = 'https://www.evolllution.com/wp-content/uploads/2012/11/adult-student.jpg';
+			}
+			else if(age > 12 && age <= 17)
+			{
+				document.getElementById('photo').src = 'https://blackmattersus.com/wp-content/uploads/2017/03/nuclear2.jpg';
+				console.log("You are a teenager");		
+			}
+			else if (10 <= age && age <= 12)
+			{
+					console.log("You are a Pre-Teen")
+			}
+			else
+			{
+				console.log('You are a baby');
+			}*/
+			
+			// var x = parseInt(prompt ('Enter number'));
+			// var y = parseInt(prompt ('Enter number'));
+			// var z = parseInt(prompt ('Enter number'));
+
+			//find the smallest number
+
+			//Step 1: Ask if x is smaller than y and x is smaller than z; write x is the smallest number; go to Step 2;
+			//Step 2: Ask if y is smaller than x and is y smaller than z; write y is the smallest; go to Step 3
+			//Step 3: Ask if z is smaller than x and is z smaller than y; write z is the smallest number
+
+			// if(x < y && x < z)
+			// {
+			// 	console.log(x + ' is the smallest');	
+			// }
+			// else if(y < z )
+			// {
+			// 	console.log(y + ' is the smallest');
+			// }
+			// else
+			// {
+			// 	console.log(z + ' is the smallest');
+			// }
+
+			switch(new Date().getMonth())
+			{
+				case 0:
+					console.log('Jan');
+					break;
+				case 8:
+				console.log('Sept')
+					break;
+				case 10:
+				console.log('Nov')
+					break;
+				case 11:
+				console.log('Dec')
+					break;
+			}
+			var name = prompt();
+			switch(name.charAt(0).toLowerCase())
+			{
+				case 't':
+					console.log('Youre Terrific');
+					break;
+				case 'j':
+					console.log('Youre Jreat');
+					break;
+				default: console.log('new phone, who dis');
+					break;	
+			}
+
+		</script>
+
+	</body>
+</html>
