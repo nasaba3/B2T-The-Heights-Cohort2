@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+	</head>
+	<body>
+		<p id="name"></p>
+
+		<form>
+			First name:<input type="text" id = "fname" value="Curtis"><br>
+			Last name: <input type="text" id = "lname" value="Jackson"><br>
+			<input type="button" value= "submit" onclick="getFormvalue()">
+		</form>
+		<script type="text/javascript">
+			//Get names to publish to page from text input box
+				//Take input names and concatinate them
+				//Then take both names together and put them on the p
+
+			function getFormvalue(){
+				var wholename = document.getElementById("fname").value + " "+document.getElementById("lname").value
+				document.getElementById("name").innerHTML = wholename;
+			}
+
+		</script>
+	</body>
+</html>
