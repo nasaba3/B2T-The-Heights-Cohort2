@@ -12,12 +12,12 @@
 			<input type="button" value= "submit" onclick="getFormvalue()">
 		</form>
 		<script type="text/javascript">
-			//Get names to publish to page from text input box
-				//Take input names and concatinate them
-				//Then take both names together and put them on the p
-
+			
+			//Created a function to hold both names	
 			function getFormvalue(){
+				//Set a variable to get the value of the first and last name
 				var wholename = document.getElementById("fname").value + " "+document.getElementById("lname").value
+				//publish the text of the join names called "wholename", using the ID "name"
 				document.getElementById("name").innerHTML = wholename;
 			}
 
