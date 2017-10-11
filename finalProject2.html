@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+	<html>
+	<head>
+		<title>KyleDeli</title>
+	</head>
+	<body>
+<style type="text/css">
+	body{background-color: rgb(65, 178, 244);
+		text-align: center; }
+
+
+</style>
+		<h1>Kyle's Deli</h1>
+		Name: <input type="" value= "" id="deliNames">
+		<br>
+		Order: <input type="" value="" id="deliOrders">
+		<br>
+		<input type="button" value="Add customer" id="addCustomer" onclick= "movingCustomer()">
+		<input type="button" value="Customer served" id="customerServed" onclick= "cusServed()">
+		
+		<table border="3px black" id="theTable">
+			<tr id="customer">
+				<th>Position</th>
+				<th>Name</th>
+				<th>Order</th>
+			</tr>
+
+		</table>
+		<h3 id="noCustomer"></h3>
+		
+
+		<script type="text/javascript">
+			//This is an open array to hold both the customers and their orders
+			var que = [];
+			
+			//Build a function that gets the values from the form
+			function movingCustomer(){
+				
+				var CustOrder = {
+					cus: document.getElementById("deliNames").value,
+					ord: document.getElementById("deliOrders").value
+				}
+			//This is where we push the order object to the queue
+				que.push(CustOrder);
+				console.log(que)
+				
+			//This is where the variable row is initiated, creating an element table row.  And this is where the row is being added to the table
+					var row = document.createElement('tr');
+				document.getElementById("theTable").appendChild(row);
+				
+			//This is where a elements were created for customer, orders and position to be able to append the table
+				row.id = ('customer' + que.length);
+				console.log (row.id)
+					var c = document.createElement('th');
+					var o = document.createElement('th');
+					var pos =document.createElement('th');
+
+			//This is the  where the input data is appended to the table
+					c.innerHTML = CustOrder.cus;
+					o.innerHTML = CustOrder.ord;
+					pos.innerHTML = que.length;
+
+					row.appendChild(pos);
+					row.appendChild(c);
+					row.appendChild(o);
+
+			//Clearing the customer names and orders once "add customer" button is pushed
+					document.getElementById("deliNames").value=""
+					document.getElementById("deliOrders").value=""
+				}
+
+
+
+
+			function cusServed(){
+				
+				console.log(que)
+			//This is a conditional that states if there are no customer in the queue, there should be a line that prints "There is nobody waiting to be served"
+				if (que.length == 0){ 
+					document.getElementById('noCustomer').innerHTML = "There is nobody waiting to be served!";
+				}
+				else  				
+				{	
+					//This removes the variable from the beginning of the array
+					//var c holds the objects for customer name and order
+					var c = que.shift()
+					document.getElementById('theTable').children[1].remove()
+					document.getElementById ("noCustomer").innerHTML= "We are currently serving" +" "+ c.cus +" "+c.ord ;
+					
+
+				}	
+					//Clearing the fields the input fields once the last customer is served
+					document.getElementById("deliNames").value=""
+					document.getElementById("deliOrders").value=""
+					
+			}
+				
+
+
+			
+
+
+		</script>
+	</body>
+</html>

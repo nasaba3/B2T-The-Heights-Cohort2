@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+	</head>
+	<body>
+		<table id="myTable" border ="1">
+			<tr>
+				<td>Clifford</td>
+				<td>Harris</td>	
+			</tr>
+			</table><br>
+				<input type="text" id = "col1" value="Curtis">
+				<input type="text" id= "col2" value="Jackson">
+		
+			<input type="button" onclick="insertRow()" value="Insert row">
+
+			<script type="text/javascript">
+				//add a row and two colums to a table. Use the text inputs to fill table data
+					//create a function that will call the elements to add to the rows
+					//create a row and append it to the table
+					//create table data and appending it to the row
+
+			//create a function that will call the elements to add to the rows
+			function insertRow(){
+				var newRow = document.createElement("tr");
+				
+				//create a row and append it to the table
+				document.getElementById("myTable").appendChild(newRow);
+
+				//create table data and appending it to the row
+				var tableData = document.createElement("td");
+				newRow.appendChild(tableData);
+				
+				//create table data and appending it to the row
+				var tableData2 = document.createElement("td");
+				newRow.appendChild (tableData2)
+				
+				//Getting the values from the input to add to the table
+				tableData.innerHTML=document.getElementById("col1").value
+				tableData2.innerHTML=document.getElementById("col2").value
+
+
+
+
+				}
+			
+
+			</script>
+				
+			
+		
+		
+	</body>
+</html>

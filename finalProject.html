@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+	<html>
+	<head>
+		<title></title>
+	</head>
+	<body>
+
+		<script type="text/javascript">
+			
+
+			var Deli = [];
+
+			// var DeliOrder = {
+			// 	name:
+			// 	itemOrder:
+			// }
+
+function currentLine(line){
+  if(!line.length) {
+    return "The line is currently empty.";
+  }
+  var lineNamesandNumbers = [];
+  
+  for(var i=0; i<line.length; i++) {
+    lineNamesandNumbers.push(i+1 + ". "+ line[i]);
+  }
+  
+  return "The line is currently: " + lineNamesandNumbers.join(', ');
+}
+
+function nowServing(line) {
+  if(!line.length) {
+    
+    return "There is nobody waiting to be served!"
+  } else {
+    
+    return "Currently serving " + line.shift();
+  }
+}
+
+function takeANumber(line, name){
+  line.push(name);
+  
+  console.log("Welcome, " + name + ". You are number " + line.length + " in line.");
+  
+  return "Welcome, " + name + ". You are number " + line.length + " in line."
+}
+takeANumber(Deli, "Ada")
+takeANumber(Deli, "Grace")
+takeANumber(Deli, "Kent")
+currentLine(Deli);
+nowServing(Deli);
+takeANumber(Deli, "Matz"); 
+currentLine(Deli); 
+nowServing(Deli);
+currentLine(Deli);
+
+		</script>
+	</body>
+</html>
