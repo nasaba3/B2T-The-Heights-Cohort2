@@ -46,6 +46,7 @@
 				function clickSquare(square){
 					if(square.innerHTML == ''){		
 						square.innerHTML = player;
+
 						
 						//gets last char of element's id
 						var i = square.id.charAt(square.id.length-1);
@@ -53,11 +54,20 @@
 
 						//changes value of player depending on its value
 						player = (player =='X')?'O':'X';
-						console.log(player)
-				
+						console.log(board)
+						
+						evalBoard();
 				}
 					}
 
+				function evalBoard(){
+					if(board[0] != '' && board[0] = board[1] && board[0] == board[2]){
+						console.log('WIN IS '+ board[0]);
+					}else if (board[3] != '' && board[4] = board[4] && board[3] == board[5]){
+						console.log('WIN IS '+ board[3]);
+					}else if (board[6] != '' && board[6] = board[7] && board[8] == board[2]){
+						console.log('WIN IS '+ board[6]);	
+					}else if 
 			</script>
 	</body>
 </html>

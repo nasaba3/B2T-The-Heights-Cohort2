@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+	</head>
+	<body>
+		<p id="name"></p>
+
+		<form>
+			First name:<input type="text" id = "fname" value="Curtis"><br>
+			Last name: <input type="text" id = "lname" value="Jackson"><br>
+			<input type="button" value= "submit" onclick="getFormvalue()">
+		</form>
+		<script type="text/javascript">
+			
+			//Created a function to hold both names	
+			function getFormvalue(){
+				//Set a variable to get the value of the first and last name
+				var wholename = document.getElementById("fname").value + " "+document.getElementById("lname").value
+				//publish the text of the join names called "wholename", using the ID "name"
+				document.getElementById("name").innerHTML = ("Hello "+ wholename);
+			}
+
+		</script>
+	</body>
+</html>
